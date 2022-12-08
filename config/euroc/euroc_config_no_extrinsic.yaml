@@ -3,23 +3,23 @@
 #common parameters
 imu_topic: "/imu0"
 image_topic: "/cam0/image_raw"
-output_path: "/home/tony-ws1/output/"
+output_path: "/vins_mono_run/outputs_no_extrinsic"
 
 #camera calibration 
 model_type: PINHOLE
 camera_name: camera
-image_width: 752
-image_height: 480
+image_width: 456
+image_height: 256
 distortion_parameters:
-   k1: -2.917e-01
-   k2: 8.228e-02
-   p1: 5.333e-05
-   p2: -1.578e-04
+   k1: 0
+   k2: 0
+   p1: 0
+   p2: 0
 projection_parameters:
-   fx: 4.616e+02
-   fy: 4.603e+02
-   cx: 3.630e+02
-   cy: 2.481e+02
+   fx: 251.75
+   fy: 227.5
+   cx: 228.0
+   cy: -1.0e2
 
 # Extrinsic parameter between IMU and Camera.
 estimate_extrinsic: 2   # 0  Have an accurate extrinsic parameters. We will trust the following imu^R_cam, imu^T_cam, don't change it.
